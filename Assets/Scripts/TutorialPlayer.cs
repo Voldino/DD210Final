@@ -8,6 +8,7 @@ public class TutorialPlayer : MonoBehaviour
 
     public float speed = 4;
     public float jumpH = 1.2f;
+    public bool isAlive = true;
 
     float gravity = 100;
     bool OnGround = false;

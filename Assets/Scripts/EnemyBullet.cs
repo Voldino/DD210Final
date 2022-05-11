@@ -5,26 +5,21 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public float life = 3f;
+    public TutorialPlayer playerScript;
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        Destroy(other.gameObject);
-    //        Destroy(gameObject);
-    //    }
-    //    else
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
-
+    private void Awake()
+    {
+        //GameObject player = GameObject.Find("player");
+        //playerScript = player.GetComponent<TutorialPlayer>();
+    }
     void OnCollisionEnter(Collision collision)
     {
 
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
+            //playerScript.isAlive = false;
+
             Destroy(gameObject);
         }
         else
