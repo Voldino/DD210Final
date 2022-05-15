@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
         if (spawnTimer > spawnRate)
         {
             spawnTimer = 0;
-            var bullet = Instantiate(enemyPrefab, enemySpawnPoint.position, enemySpawnPoint.rotation);
+            var Enemy = Instantiate(enemyPrefab, enemySpawnPoint.position, enemySpawnPoint.rotation);
 
         }
     }
